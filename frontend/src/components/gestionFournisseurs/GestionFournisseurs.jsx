@@ -12,7 +12,7 @@ function GestionFournisseurs() {
       .get("/fournisseurs")
       .then((resp) => {
         setFournisseursList(resp.data);
-        setIsDeleted(false); // On réinitialise isDeleted à false pour être prêt pour la prochaine suppression
+        setIsDeleted(false);
       })
       .catch((err) => console.error(err));
   }, [isDeleted]);
@@ -38,7 +38,6 @@ function GestionFournisseurs() {
           <p>problème de chargement</p>
         )}
       </div>
-      ;
     </div>
   );
 }

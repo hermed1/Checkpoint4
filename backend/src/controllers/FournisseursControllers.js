@@ -7,6 +7,7 @@ const validate = (data, forCreation = true) => {
     .object({
       logo: joi.string().max(255).presence(presence),
       description: joi.string().presence(presence),
+      nom: joi.string().max(45).presence(presence),
     })
     .validate(data, { abortEarly: false }).error;
 };
@@ -84,8 +85,9 @@ const add = (req, res) => {
 };
 
 const destroy = (req, res) => {
+  const { id } = req.params;
   models.fournisseurs
-    .delete(req.params.id)
+    .delete(id)
     .then(([result]) => {
       if (result.affectedRows === 0) {
         res.sendStatus(404);
