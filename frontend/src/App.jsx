@@ -5,6 +5,7 @@ import Admin from "./pages/Admin";
 import Fournisseurs from "./pages/Fournisseurs";
 import Accueil from "./pages/Accueil";
 import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="admin" element={<Admin />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
