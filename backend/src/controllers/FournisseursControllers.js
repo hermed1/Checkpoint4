@@ -43,7 +43,7 @@ const read = (req, res) => {
 const edit = (req, res) => {
   const errors = validate(req.body, false);
   if (errors) {
-    return res.sensStatus(422);
+    return res.sendStatus(422);
   }
   const fournisseur = req.body;
 
