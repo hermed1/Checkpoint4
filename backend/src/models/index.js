@@ -39,6 +39,11 @@ const FournisseursManager = require("./FournisseursManager");
 models.fournisseurs = new FournisseursManager();
 models.fournisseurs.setDatabase(pool);
 
+const AdminManager = require("./AdminManager");
+
+models.admin = new AdminManager();
+models.admin.setDatabase(pool);
+
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
 

@@ -1,6 +1,7 @@
 const express = require("express");
 
 const router = express.Router();
+const auth = require("./utils/auth");
 
 const itemControllers = require("./controllers/itemControllers");
 
@@ -12,10 +13,15 @@ router.delete("/items/:id", itemControllers.destroy);
 
 const fournisseursControllers = require("./controllers/FournisseursControllers");
 
-router.get("/fournisseurs", fournisseursControllers.browse);
-router.get("/fournisseurs/:id", fournisseursControllers.read);
-router.post("/fournisseurs", fournisseursControllers.add);
-router.put("/fournisseurs/:id", fournisseursControllers.edit);
-router.delete("/fournisseurs/:id", fournisseursControllers.destroy);
+router.get("/fournisseurs", auth, fournisseursControllers.browse);
+router.get("/fournisseurs/:id", auth, fournisseursControllers.read);
+router.post("/fournisseurs", auth, fournisseursControllers.add);
+router.put("/fournisseurs/:id", auth, fournisseursControllers.edit);
+router.delete("/fournisseurs/:id", auth, fournisseursControllers.destroy);
+
+const adminControllers = require("./controllers/AdminControllers");
+
+router.post("/login", adminControllers.login);
+router.post("/signup", adminControllers.signup);
 
 module.exports = router;
