@@ -5,15 +5,15 @@ function Accueil() {
   return (
     <div>
       <main className="main">
+        <p className="main__company-name">Garantie Réseau Direct</p>
         <h1 className="main__h1">
           Spécialistes du courtage en énergie pour les professionnels à Lorient
-          | Garantie Réseau Direct
         </h1>
-        <h2>
-          Des solutions d'énergie fiables et rentables pour les entreprises en
+        <h2 className="main__h2">
+          Des solutions d'énergie fiables et rentables pour les entreprises de
           Bretagne.
         </h2>
-        <p>
+        <p className="main__p">
           Garantie Réseau Direct est depuis 2018 votre expert de confiance en
           courtage d'énergie pour les professionnels en Bretagne. Nous sommes
           spécialisés dans la fourniture de solutions énergétiques sur mesure
@@ -21,7 +21,7 @@ function Accueil() {
           collectivités, les artisans, les bâtiments industriels et les
           agriculteurs.
         </p>
-        <p>
+        <p className="main__p">
           Grâce à une analyse précise de votre consommation et à une
           connaissance approfondie du marché de l'énergie, nous proposons des
           solutions et des alternatives fiables pour optimiser votre
@@ -35,11 +35,11 @@ function Accueil() {
             alt="économies d'énergie avec ampoule"
             className="main__image"
           />
-          <div>
-            <h3 className="image__text__element">
-              Comment optimisons-nous votre consommation d'énergie ?
+          <div className="h3__p__container">
+            <h3 className="image__text__element main__h3">
+              Comment optimisons-nous vos factures d'énergie ?
             </h3>
-            <p className="image__text__element">
+            <p className="image__text__element main__paragraph">
               Nous comparons de manière exhaustive les offres de différents
               fournisseurs d'énergie pour vous proposer la meilleure option en
               fonction de votre consommation et de vos besoins spécifiques.
@@ -50,9 +50,9 @@ function Accueil() {
           </div>
         </div>
       </section>
-      <section>
-        <h3 className="image__text__element">
-          Garantie Réseau Direct c'est aussi
+      <section className="also__section">
+        <h3 className="image__text__element main__h3">
+          Garantie Réseau Direct c'est aussi :
         </h3>
         <ul>
           <li className="home__li">

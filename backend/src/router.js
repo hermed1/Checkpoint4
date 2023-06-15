@@ -13,8 +13,8 @@ router.delete("/items/:id", itemControllers.destroy);
 
 const fournisseursControllers = require("./controllers/FournisseursControllers");
 
-router.get("/fournisseurs", auth, fournisseursControllers.browse);
-router.get("/fournisseurs/:id", auth, fournisseursControllers.read);
+router.get("/fournisseurs", fournisseursControllers.browse);
+router.get("/fournisseurs/:id", fournisseursControllers.read);
 router.post("/fournisseurs", auth, fournisseursControllers.add);
 router.put("/fournisseurs/:id", auth, fournisseursControllers.edit);
 router.delete("/fournisseurs/:id", auth, fournisseursControllers.destroy);

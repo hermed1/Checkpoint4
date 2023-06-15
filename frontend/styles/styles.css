@@ -7,12 +7,12 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  padding: 0 20px;
-}
-
 a:visited {
   color: black;
+}
+
+p {
+  text-align: justify;
 }
 
 .header .navbar {
@@ -79,7 +79,6 @@ a:visited {
   background-color: rgb(41, 69, 149);
   display: flex;
   flex-direction: row-reverse;
-  border: green solid;
   justify-content: space-between;
 }
 
@@ -97,6 +96,17 @@ a:visited {
   height: 120px;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(236, 236, 236);
+}
+.main__company-name {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 25px;
+}
 .main__image {
   width: 100%;
   margin-bottom: 20px;
@@ -106,23 +116,53 @@ a:visited {
     width: 50%;
   }
 }
+.main__h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  width: 75%;
+  text-align: justify;
+}
+.main__h2 {
+  margin: 20px 0;
+  width: 90%;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+.main__h3 {
+  width: 80%;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+.main__p {
+  padding: 5px 20px;
+}
+.main__paragraph {
+  width: 80%;
+}
 
 .image__text__element {
   margin-bottom: 20px;
 }
 
 .home__li {
-  color: blue;
+  list-style-type: disc;
+  margin-bottom: 10px;
 }
 
-.footer {
-  height: 300px;
-  background-image: url("../assets/images/ampoule_footer.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  border: red solid;
+.h3__p__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.also__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
 .footer__logo__tel__container {
   display: flex;
   flex-direction: column;
@@ -135,9 +175,32 @@ a:visited {
 }
 .footer__link {
   margin-bottom: 10px;
+  color: white;
 }
 .footer__p {
   margin-bottom: 10px;
+}
+
+.footer {
+  margin-top: 50px;
+  color: aliceblue;
+  height: 300px;
+  background-image: url(https://images.pexels.com/photos/2177473/pexels-photo-2177473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.2;
 }
 
 /*# sourceMappingURL=styles.css.map */
