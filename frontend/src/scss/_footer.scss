@@ -1,0 +1,47 @@
+.footer {
+  // margin-top: 50px;
+  // color: aliceblue;
+  // height: 300px;
+  // background-image: url(https://images.pexels.com/photos/2177473/pexels-photo-2177473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  &__logo__tel__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__links__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__link {
+    margin-bottom: 10px;
+    color: white;
+  }
+  &__p {
+    margin-bottom: 10px;
+  }
+}
+.footer {
+  margin-top: 50px;
+  color: aliceblue;
+  height: 300px;
+  background-image: url(https://images.pexels.com/photos/2177473/pexels-photo-2177473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative; // Position relative pour le pseudo-element
+}
+
+.footer::after {
+  content: ""; // Contenu vide pour le pseudo-element
+  position: absolute; // Positionnement absolu par rapport à .footer
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; // Couvre tout l'espace de .footer
+  background-color: black; // Couleur d'arrière-plan du pseudo-element
+  opacity: 0.2; // Opacité du pseudo-element
+}

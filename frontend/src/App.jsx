@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/navbar/Header";
 import Contact from "./pages/Contact";
 import Recrutement from "./pages/Recrutement";
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
 import Fournisseurs from "./pages/Fournisseurs";
 import Accueil from "./pages/Accueil";
-import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
 

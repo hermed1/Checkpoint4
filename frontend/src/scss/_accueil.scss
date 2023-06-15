@@ -1,0 +1,63 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $background-color;
+
+  &__company-name {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  &__image {
+    width: 100%;
+    margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
+  }
+  &__h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    width: 75%;
+    text-align: justify;
+  }
+  &__h2 {
+    margin: 20px 0;
+    width: 90%;
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+  &__h3 {
+    width: 80%;
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+  &__p {
+    padding: 5px 20px;
+  }
+  &__paragraph {
+    width: 80%;
+  }
+}
+
+.image__text__element {
+  margin-bottom: 20px;
+}
+
+.home__li {
+  list-style-type: disc;
+  margin-bottom: 10px;
+}
+.h3__p__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.also__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
