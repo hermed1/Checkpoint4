@@ -1,0 +1,16 @@
+.main {
+  &__image {
+    width: 100%;
+    margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
+  }
+}
+
+.image__text__element {
+  margin-bottom: 20px;
+}
+.home__li {
+  color: blue;
+}
