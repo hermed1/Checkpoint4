@@ -7,15 +7,20 @@ class FournisseursManager extends AbstractManager {
 
   insert(fournisseur) {
     return this.database.query(
-      `insert into ${this.table} (logo, description) values (?, ?)`,
-      [fournisseur.logo, fournisseur.description]
+      `insert into ${this.table} (logo, nom, description) values (?, ?, ?)`,
+      [fournisseur.logo, fournisseur.nom, fournisseur.description]
     );
   }
 
   update(fournisseur) {
     return this.database.query(
-      `update ${this.table} set logo = ?, description = ? where id = ?`,
-      [fournisseur.logo, fournisseur.description, fournisseur.id]
+      `update ${this.table} set logo = ?, nom = ?, description = ? where id = ?`,
+      [
+        fournisseur.logo,
+        fournisseur.nom,
+        fournisseur.description,
+        fournisseur.id,
+      ]
     );
   }
 }
