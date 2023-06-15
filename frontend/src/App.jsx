@@ -7,8 +7,19 @@ import Fournisseurs from "./pages/Fournisseurs";
 import Accueil from "./pages/Accueil";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
+import { AuthProvider, useAuth } from "./contexts/AuthContext";
 
 function App() {
+  return (
+    <AuthProvider>
+      <AppRoutes />
+    </AuthProvider>
+  );
+}
+
+function AppRoutes() {
+  const { isAuthenticated } = useAuth();
+
   return (
     <div className="App">
       <Navbar />
@@ -18,7 +29,8 @@ function App() {
         <Route path="recrutement" element={<Recrutement />} />
         <Route path="contact" element={<Contact />} />
         <Route path="login" element={<Login />} />
-        <Route path="admin" element={<Admin />} />
+        {isAuthenticated && <Route path="/admin" element={<Admin />} />}
+        <Route path="*" element={<Accueil />} />
       </Routes>
       <Footer />
     </div>
